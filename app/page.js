@@ -32,7 +32,7 @@ export default function Page() {
         <div className="flex lg:flex-row flex-col w-full lg:gap-20 gap-10 lg:px-10 px-5  justify-center items-center relative z-10">
           <div className="lg:w-1/4 w-5/6 mt-10 relative" onClick={() => router.push("/guru-kompeten")}>
             <img src="/svg/kompeten.svg" className="lg:w-full w-full h-1/2" />
-            <div className="absolute z-10 lg:bottom-56 bottom-48 ">
+            <div className="absolute z-10 lg:bottom-52 bottom-48 ">
               <span className="bg-primary pl-4 pr-10 pt-4 pb-3 text-white lg:text-3xl text-2xl font-bold">Guru</span><br />
               <br />
               <span className="bg-primary pl-4 pr-10 pt-4 pb-3 text-white lg:text-3xl text-2xl font-bold mt-4">Kompeten</span>
