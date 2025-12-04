@@ -17,7 +17,7 @@ export default function Page() {
             
             Sejahtera, dan Bahagia
           </p>
-          <p className="lg:text-xl text-lg mb-4 text-brand-light relative z-10 lg:px-10 px-0">Guruverse.ID adalah ruang semesta bagi guru Indonesia untuk terhubung, bertumbuh, dan berdaya.</p>
+          <p className="lg:text-xl text-lg mb-4 text-brand-light relative z-10 lg:pr-10 px-0">Guruverse.ID adalah ruang semesta bagi guru Indonesia untuk terhubung, bertumbuh, dan berdaya.</p>
           <button className="relative z-10 h-12 px-10 rounded-3xl mx-auto  lg:ml-10   cursor-pointer bg-gradient-to-r from-secondary to-primary" onClick={() => router.push("/about-us")}>
             <span className="text-white font-semibold text-xl ">Learn More</span>
           </button>
