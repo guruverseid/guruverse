@@ -28,7 +28,7 @@ export default function Page() {
       </div>
       <div className="w-full flex flex-col items-center relative z-10 lg:-mt-44 -mt-28 pb-44">
         <p className="font-bold lg:text-4xl text-3xl mb-4 text-center relative z-10 lg:px-0 px-10 text-white">Pilar Utama Guruverse.ID</p>
-        <p className="lg:text-lg text-md lg:text-center text-justify relative z-10 text-white  lg:px-0 px-8">Membangun ekosistem pendidikan yang memberdayakan guru secara kompetensi, ekonomi, dan spiritual sebagai fondasi peradaban yang berkelanjutan</p>
+        <p className="lg:text-lg text-md lg:text-center text-justify relative z-10 text-white  lg:px-0 px-8 lg:w-3/6">Membangun ekosistem pendidikan yang memberdayakan guru secara kompetensi, ekonomi, dan spiritual sebagai fondasi peradaban yang berkelanjutan</p>
         <div className="flex lg:flex-row flex-col w-full lg:gap-20 gap-10 lg:px-10 px-5  justify-center items-center relative z-10">
           <div className="lg:w-1/4 w-5/6 mt-10 relative" onClick={() => router.push("/guru-kompeten")}>
             <img src="/svg/kompeten.svg" className="lg:w-full w-full h-1/2" />
