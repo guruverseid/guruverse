@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
   // const [currentPage, setCurrentPage] = useState(false);
 
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={montserrat.variable+ " scroll-smooth"}>
       <title>
         Guruverse.ID | Bukan sekadar nama. Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.
         Sebuah ruang di mana guru bertumbuh secara kompeten, sejahtera, dan bahagia. Menghadirkan kehangatan dalam kebersamaan,spiritualitas dalam setiap langkah,dan arah gerakan yang membumi, namun tetap visioner.

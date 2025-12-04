@@ -6,7 +6,7 @@ export default function Page() {
   const router = useRouter();
 
   return (
-    <div className="w-full h-auto mx-auto relative z-10 lg:pb-44 pb-64 lg:-mb-72 -mb-80 ">
+    <div className="w-full h-auto mx-auto overflow-y-auto relative z-10 lg:pb-44 pb-64 lg:-mb-72 -mb-80 ">
       <img src="/backgrounds/bg-home.svg" className="w-full lg:max-w-full max-w-lg   h-auto object-cover lg:flex lg:absolute hidden z-0 bottom-0" />
       <img src="/backgrounds/bg-home-mobile.svg" className="w-full lg:max-w-full max-w-lg   h-full object-cover flex absolute lg:hidden z-0 " />
 
