@@ -11,15 +11,15 @@ export default function Page() {
       <img src="/backgrounds/bg-home-mobile.svg" className="w-full lg:max-w-full max-w-lg   h-full object-cover flex absolute lg:hidden z-0 " />
 
       <div className="flex w-full lg:flex-row flex-col justify-between items-center lg:pl-32 pl-0 relative z-10 pb-72 lg:-mt-12 -mt-0">
-        <div className="lg:pl-10 px-10 lg:w-1/2 lg:-mt-0 -mt-16 relative z-10 lg:order-1 order-2">
+        <div className="lg:pl-10 px-10 lg:w-1/2 lg:-mt-0 -mt-16 relative z-10 lg:order-1 order-2 flex flex-col">
           <p className="lg:text-5xl text-4xl lg:pr-0 px-0 lg:pt-0 pt-10  font-bold mb-4 text-brand">
             Semesta Guru Kompeten,&nbsp;
             
             Sejahtera, dan Bahagia
           </p>
           <p className="lg:text-xl text-lg mb-4 text-brand-light relative z-10 lg:px-10 px-0">Guruverse.ID adalah ruang semesta bagi guru Indonesia untuk terhubung, bertumbuh, dan berdaya.</p>
-          <button className="relative z-10 h-12 px-10 rounded-3xl  ml-10 mx-auto  cursor-pointer bg-gradient-to-r from-secondary to-primary" onClick={() => router.push("/about-us")}>
-            <span className="text-white font-semibold text-xl">Learn More</span>
+          <button className="relative z-10 h-12 px-10 rounded-3xl mx-auto  lg:ml-10   cursor-pointer bg-gradient-to-r from-secondary to-primary" onClick={() => router.push("/about-us")}>
+            <span className="text-white font-semibold text-xl ">Learn More</span>
           </button>
         </div>
         <div className="relative z-10 lg:w-1/2 w-4/6 lg:order-2 order-1">
@@ -39,7 +39,7 @@ export default function Page() {
             </div>
             <div className="bg-brand w-full lg:min-h-60 min-h-60 h-auto rounded-3xl  bottom-0 lg:px-8 lg:pt-8 lg:pb-4 px-4 py-2 justify-between absolute flex flex-col">
               <p className="lg:mt-10 mt-4 lg:text-lg text-md text-white  lg:pt-0 pt-10">Kami memfasilitasi pengembangan kompetensi guru melalui platform digital dan pelatihan terpadu.</p>
-              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 justify-self-end mr-4 cursor-pointer " /></button>
+              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 ml-auto mr-4 cursor-pointer " /></button>
             </div>
           </div>
           <div className="lg:w-1/4 w-5/6 lg:mt-10 mt-0 relative" onClick={() => window.open("https://sharinghappiness.org/profile/1650733")}>
@@ -51,7 +51,7 @@ export default function Page() {
             </div>
             <div className="bg-brand w-full lg:minh-60 rounded-3xl min-h-72  Jrounded-3xl  bottom-0 lg:px-8 lg:pt-8 lg:pb-4 px-4 py-2 justify-between absolute flex flex-col">
               <p className="lg:mt-4 mt-8 lg:text-lg mb-2 text-md text-white">Kami mengupayakan kesejahteraan ekonomi guru melalui pendekatan filantropi, literasi finansial, dan usaha lainnya dengan prinsip gotong royong.</p>
-              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 justify-self-end mr-4 cursor-pointer " /></button>
+              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 ml-auto mr-4 cursor-pointer " /></button>
             </div>
           </div>
           <div className="lg:w-1/4 w-5/6 lg:mt-10 mt-2  relative " onClick={() => window.open("https://www.instagram.com/ceriatraining?igsh=dHl3ZG5nM3E4MTFo")}>
@@ -63,7 +63,7 @@ export default function Page() {
             </div>
             <div className="bg-brand w-full lg:minh-60 min-h-60 h-auto rounded-3xl  bottom-0 lg:px-8 lg:pt-8 lg:pb-4 px-4 py-2 justify-between absolute flex flex-col">
               <p className="lg:mt-8 mt-8 mb-4 lg:text-lg text-md text-white">Kami menghadirkan kebahagiaan guru dalam ruang kebersamaan melalui Komunitas Guru Berdaya.</p>
-              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 justify-self-end mr-4 cursor-pointer " /></button>
+              <button><img src="/images/forward.png" className=" rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 ml-auto mr-4 cursor-pointer " /></button>
             </div>
           </div>
         </div>
