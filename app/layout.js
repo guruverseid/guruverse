@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -7,6 +7,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './globals.css';
 import { useEffect, useState } from "react";
+import TransitionProvider from "./_components/transition/transition";
+import Image from "next/image";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -32,10 +34,11 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+  const pathname = usePathname();
   // const [currentPage, setCurrentPage] = useState(false);
 
   return (
-    <html lang="en" className={montserrat.variable+ " scroll-smooth"}>
+    <html lang="en" className={montserrat.variable + " scroll-smooth"}>
       <title>
         Guruverse.ID | Bukan sekadar nama. Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.
         Sebuah ruang di mana guru bertumbuh secara kompeten, sejahtera, dan bahagia. Menghadirkan kehangatan dalam kebersamaan,spiritualitas dalam setiap langkah,dan arah gerakan yang membumi, namun tetap visioner.
@@ -45,69 +48,118 @@ export default function RootLayout({ children }) {
         className=""
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-full lg:max-w-full max-w-lg overflow-x-hidden  h-auto min-h-screen overflow-y-auto bg-body mx-auto ">
-          <div className="flex justify-between items-center lg:m-4 m-2">
-            <img src="/svg/logo-colorfull.svg" className="lg:h-20 h-12 w-auto cursor-pointer" onClick={() => router.push("/")} />
-            <div className="lg:flex mr-4 hidden ">
-              <button className="mr-4 cursor-pointer" onClick={() => router.push("/about-us")}>
-                {/* ${currentPage == "about-us" ? "text-secondary" : "text-primary"} */}
-                <span className={` text-primary font-semibold hover:text-secondary `}>Tentang Kami</span>
-              </button>
-              <button className="border-2  cursor-pointer h-12 px-10 font-semibold rounded-3xl border-primary text-primary hover:text-secondary hover:border-secondary" onClick={() => window.open("https://api.whatsapp.com/send?phone=6283133531303&text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20Guruverse.ID")}>
-                <span className="text-lg">Contact Us</span>
-              </button>
-            </div>
-            <div className="flex mr-4 lg:hidden ">
-              <img src="/svg/menu.svg" className=" w-8 h-auto cursor-pointer z-10" onClick={() => setOpenMenu(!openMenu)} />
-            </div>
-          </div>
-          {
-            <aside
-              className={`lg:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform transition-transform duration-300 z-50
-        ${openMenu ? "translate-x-0" : "translate-x-full"}
-        lg:translate-x-0 lg:static lg:ml-auto`}
-            >
-              <div className="p-6 border-b flex justify-between items-center">
-                <h2 className="text-xl font-semibold">Menu</h2>
-
-                {/* Close button mobile */}
-                <button
-                  onClick={() => setOpenMenu(false)}
-                  className="lg:hidden p-2"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-                    viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+        <TransitionProvider>
+          <div className="w-full lg:max-w-full max-w-lg overflow-x-hidden  h-auto min-h-screen overflow-y-auto bg-body mx-auto ">
+            <div className="flex justify-between items-center lg:m-4 m-2">
+              <img src="/svg/logo-colorfull.svg" className="lg:h-20 h-12 w-auto cursor-pointer" onClick={() => router.push("/")} />
+              <div className="lg:flex mr-4 hidden ">
+                <button className="mr-4 cursor-pointer" onClick={() => router.push("/about-us")}>
+                  <span className={` text-primary font-semibold hover:text-secondary `}>Tentang Kami</span>
+                </button>
+                <button className="border-2  cursor-pointer h-12 px-10 font-semibold rounded-3xl border-primary text-primary hover:text-secondary hover:border-secondary" onClick={() => window.open("https://api.whatsapp.com/send?phone=6283133531303&text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20Guruverse.ID")}>
+                  <span className="text-lg">Contact Us</span>
                 </button>
               </div>
-
-              <nav className="p-4 space-y-2">
-                <a href="/" className="block px-4 py-2 rounded hover:bg-gray-200">Home</a>
-                <a href="/about-us" className="block px-4 py-2 rounded hover:bg-gray-200">Tentang Kami</a>
-                <a href="/guru-kompeten" className="block px-4 py-2 rounded hover:bg-gray-200">Guru Kompeten</a>
-                <a href="https://sharinghappiness.org/profile/1650733" className="block px-4 py-2 rounded hover:bg-gray-200">Guru Sejahtera </a>
-                <a href="https://www.instagram.com/ceriatraining?igsh=dHl3ZG5nM3E4MTFo" className="block px-4 py-2 rounded hover:bg-gray-200">Guru Bahagia </a>
-              </nav>
-            </aside>
-          }
-          {children}
-          <footer className="flex justify-between items-end bg-secondary lg:pb-8 pb-0 lg:pt-28 pt-0 lg:pr-0 pr-8">
-            <div className="mt-16  lg:mx-10 mx-4 relative z-10 flex flex-col">
-              <img src="/svg/logo-white.svg" className=" lg:w-32 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2" onClick={() => router.push("/")} />
-              <div className="lg:order-2 order-1 mb-4 lg:mb-0">
-                <p className="text-sm lg:text-lg font-bold text-white ml-3">Alamat</p>
-                <p className="text-sm lg:text-lg text-white ml-3 cursor-pointer" onClick={() => window.open("https://maps.app.goo.gl/BxickKBZeqStR7Gx9")}>
-                  Komplek Jatimulya Jl. Jati Mulya No. 9, Gumuruh, <br />Kec. Batununggal, Kota Bandung, Jawa Barat 40275</p>
+              <div className="flex mr-4 lg:hidden ">
+                <img src="/svg/menu.svg" className=" w-8 h-auto cursor-pointer z-10" onClick={() => setOpenMenu(!openMenu)} />
               </div>
             </div>
-            <div className="flex gap-4 mr-10 relative z-10">
-              <img src="/svg/instagram.svg" className=" w-10 h-auto mb-6 cursor-pointer" onClick={() => window.open("https://www.instagram.com/ceriatraining?igsh=dHl3ZG5nM3E4MTFo")} />
-              <img src="/svg/youtube.svg" className=" w-10 h-auto mb-6 cursor-pointer" onClick={() => window.open("https://www.youtube.com/@JUARATV")} />
-            </div>
-          </footer>
-        </div>
+            {
+              <aside
+                className={`lg:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform transition-transform duration-300 z-50
+        ${openMenu ? "translate-x-0" : "translate-x-full"}
+        lg:translate-x-0 lg:static lg:ml-auto`}
+              >
+                <div className="p-6 border-b flex justify-between items-center bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="text-xl font-semibold text-white">Menu</h2>
+
+                  {/* Close button mobile */}
+                  <button
+                    onClick={() => setOpenMenu(false)}
+                    className="lg:hidden p-2"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
+                      viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+                <nav className="p-4 space-y-2">
+                  <a href="/" className="block px-4 py-2  border-b rounded hover:bg-secondary">Home</a>
+                  <a href="/under-construction" className="block px-4 py-2  border-b rounded hover:bg-secondary">Learning Partner</a>
+                  <a href="/under-construction" className="block px-4 py-2  border-b rounded hover:bg-secondary">Teaching Partner </a>
+                  <a href="/under-construction" className="block px-4 py-2  border-b rounded hover:bg-secondary">Digital & Innovation Partner </a>
+                  <a href="/about-us" className="block px-4 py-2  border-b rounded hover:bg-secondary">Tentang Kami</a>
+                </nav>
+              </aside>
+            }
+            {children}
+            <footer className="grid grid-flow-row grid-cols-3 w-full justify-between items-end bg-secondary lg:pb-8 pb-0 lg:pt-28 pt-0 lg:pr-0 pr-8">
+              <div className="mt-16 col-span-2 lg:mx-10 mx-4 relative z-10 flex flex-col ">
+                <div className="relative lg:w-32 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2 lg:pb-[15%] pb-[65%]" onClick={() => router.push("/")} >
+                  <Image 
+                    src="/svg/logo-white.svg"
+                    alt="background"
+                    fill
+                    // priority
+                    className="object-cover object-bottom"
+                  />
+                </div>
+                <div className="lg:order-2 order-1 mb-4 lg:mb-0">
+                  <p className="text-sm lg:text-lg font-bold text-white ml-3">Alamat</p>
+                  <p className="text-sm lg:text-lg text-white ml-3 cursor-pointer" onClick={() => window.open("https://maps.app.goo.gl/BxickKBZeqStR7Gx9")}>
+                    Komplek Jatimulya Jl. Jati Mulya No. 9, Gumuruh, <br/>Kec. Batununggal, Kota Bandung, Jawa Barat 40275</p>
+                </div>
+              </div>
+              <div
+                className="flex items-end justify-end gap-4 lg:mr-10 mr-0 relative z-10"
+                style={{ willChange: "transform", transform: "translateZ(0)" }}
+              >
+                <div
+                  className="mb-6 cursor-pointer lg:order-1 order-2"
+                  onClick={() =>
+                    requestAnimationFrame(() =>
+                      window.open(
+                        "https://www.instagram.com/ceriatraining?igsh=dHl3ZG5nM3E4MTFo",
+                        "_blank"
+                      )
+                    )
+                  }
+                >
+                  <Image
+                    src="/svg/instagram.svg"
+                    alt="instagram"
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                    className="w-10 h-10"
+                  />
+                </div>
+
+                <div
+                  className="mb-6 cursor-pointer lg:order-1 order-2"
+                  onClick={() =>
+                    requestAnimationFrame(() =>
+                      window.open("https://www.youtube.com/@JUARATV", "_blank")
+                    )
+                  }
+                >
+                  <Image
+                    src="/svg/youtube.svg"
+                    alt="youtube"
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                    className="w-10 h-10"
+                  />
+                </div>
+              </div>
+
+            </footer>
+          </div>
+        </TransitionProvider>
       </body>
-    </html>
+    </html >
   );
 }
