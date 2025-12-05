@@ -58,9 +58,9 @@ export default function Page() {
         <p className="font-bold lg:text-4xl text-3xl mb-4 text-center relative z-10 lg:px-0 px-10 text-white">Pilar Utama Guruverse.ID</p>
         <p className="lg:text-lg text-md lg:text-center text-justify relative z-10 text-white  lg:px-0 px-8 lg:w-3/6">Membangun ekosistem pendidikan yang mendukung peningkatan kompetensi guru secara pedagogik, profesional, personal, sosial, digital, dan inovatif.</p>
         <div className="flex lg:flex-row flex-col w-full lg:gap-20 gap-10 lg:px-10 px-5  justify-center items-center relative z-10">
-          <div className="lg:w-1/4 w-5/6 mt-10 relative" onClick={() => router.push("/under-construction")}>
+          <div className="lg:w-1/4 w-5/6  lg:mt-10 mt-0 relative" onClick={() => router.push("/under-construction")}>
             {/* <img src="/svg/kompeten.svg" className="lg:w-full w-full h-1/2" /> */}
-            <div className="pb-[160%] h-1/2 w-full">
+            <div className="pb-[160%] h-1/2 w-full pt-4">
               <Image
                 src="/svg/kompeten.svg"
                 alt="background"
@@ -71,7 +71,7 @@ export default function Page() {
             </div>
             <div className="bg-brand w-full lg:min-h-60 min-h-60 h-auto rounded-3xl  bottom-0 lg:px-8 lg:pt-8 lg:pb-4 px-4 py-2 justify-between absolute flex flex-col">
               <p className="bg-gradient-to-r from-primary to-secondary lg:px-4 px-2 lg:pt-4 pt-2 lg:pb-3 pb-2 lg:-mt-14 -mt-8 text-white lg:text-3xl text-xl font-bold text-center rounded-xl ">Learning <br /> Partner</p>
-              <p className="lg:mt-3 mb-4 mt-4 lg:text-lg lg:text-md text-sm text-white text-justify">Ruang belajar digital terstruktur untuk meningkatkan kompetensi guru secara berkelanjutan.</p>
+              <p className="lg:mt-3 mb-4 mt-4 lg:text-lg lg:text-md text-sm text-white text-justify pt-3">Ruang belajar digital terstruktur untuk meningkatkan kompetensi guru secara berkelanjutan.</p>
               <button className="rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 ml-auto mr-2 cursor-pointer ">
                 <div className=" w-8 h-6 relative">
                   <Image
@@ -125,7 +125,7 @@ export default function Page() {
               />
             </div>
             <div className="bg-brand w-full lg:minh-60 min-h-60 h-auto rounded-3xl  bottom-0 lg:px-8 lg:pt-8 lg:pb-4 px-4 py-2 justify-between absolute flex flex-col">
-              <p className="bg-gradient-to-r from-primary to-secondary lg:px-4 px-2 lg:pt-4 pt-2 lg:pb-3 pb-2 lg:-mt-14 -mt-8 text-white lg:text-3xl text-xl font-bold text-center rounded-xl">Digital & Innovation Partner</p>
+              <p className="bg-gradient-to-r from-primary to-secondary lg:px-4 px-2 lg:pt-5 pt-2 lg:pb-4 pb-2 lg:-mt-14 -mt-8 text-white lg:text-3xl text-xl font-bold text-center rounded-xl">Digital & Innovation Partner</p>
 
               <p className="lg:mt-3 mt-4 mb-4 lg:text-lg lg:text-md text-sm text-white text-justify">Penguatan literasi digital dan inovasi pembelajaran untuk menghadapi tantangan era modern.</p>
               <button className="rounded-full bg-body lg:px-4 lg:py-5 px-2 py-3 ml-auto mr-2 cursor-pointer ">
