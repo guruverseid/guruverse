@@ -40,9 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable + " scroll-smooth"}>
       <title>
-        Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
-        Sebuah ruang semesta peningkatan kompetensi guru.
-        Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
+        Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub. Sebuah ruang semesta peningkatan kompetensi guru. Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
       </title>
       {/* <meta name="title" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
         Sebuah ruang semesta peningkatan kompetensi guru.
@@ -61,7 +59,7 @@ export default function RootLayout({ children }) {
           <div className="w-full lg:max-w-full max-w-lg overflow-x-hidden  h-auto min-h-screen overflow-y-auto bg-body mx-auto ">
             <div className="flex justify-between items-center lg:m-4 m-2">
               {/* <img src="/images/logo-colorfull.png" className="lg:h-7 h-6 w-auto cursor-pointer my-4 ml-4" onClick={() => router.push("/")} /> */}
-              <div className="relative w-52 h-auto cursor-pointer my-4 ml-4  lg:pb-[1.5%] pb-[7%]" onClick={() => router.push("/")} >
+              <div className="relative lg:w-44 w-52 h-auto cursor-pointer my-4 ml-4  lg:pb-[1.5%] pb-[7%]" onClick={() => router.push("/")} >
                 <Image
                   src="/images/logo-colorfull.png"
                   alt="background"
@@ -114,7 +112,7 @@ export default function RootLayout({ children }) {
             {children}
             <footer className="grid grid-flow-row grid-cols-3 w-full justify-between items-end bg-secondary lg:pb-8 pb-0 lg:pt-28 pt-0 lg:pr-0 pr-8">
               <div className="mt-16 col-span-2 lg:mx-10 mx-4 relative z-10 grid ">
-                <div className="relative ml-3 lg:w-40 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2 lg:pb-[1.9%] pb-[7%]" onClick={() => router.push("/")} >
+                <div className="relative ml-3 lg:w-36 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2 lg:pb-[1.9%] pb-[7%]" onClick={() => router.push("/")} >
                   <Image
                     src="/images/logo-white.png"
                     alt="background"
