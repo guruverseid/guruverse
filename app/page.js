@@ -7,7 +7,7 @@ export default function Page() {
   const router = useRouter();
 
   return (
-    <div className="w-full h-auto mx-auto relative z-10 pb-56 pt-16  ">
+    <div className="w-full h-auto mx-auto relative z-10 pb-56 pt-10  ">
       {/* ================= BACKGROUND ================= */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         <div className="hidden lg:block w-full h-full">
