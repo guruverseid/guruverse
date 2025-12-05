@@ -44,15 +44,15 @@ export default function RootLayout({ children }) {
         Sebuah ruang semesta peningkatan kompetensi guru.
         Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
       </title>
-      <meta name="title" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
+      {/* <meta name="title" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
         Sebuah ruang semesta peningkatan kompetensi guru.
         Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
      `} />
       <meta name="description" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
         Sebuah ruang semesta peningkatan kompetensi guru.
         Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
-     `} />
-      <meta name="keywords" content="guru" />
+     `} /> */}
+      {/* <meta name="keywords" content="guru" /> */}
       <body
         className=""
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
