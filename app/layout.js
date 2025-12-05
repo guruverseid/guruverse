@@ -40,10 +40,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable + " scroll-smooth"}>
       <title>
-        Guruverse.ID | Bukan sekadar nama. Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.
-        Sebuah ruang di mana guru bertumbuh secara kompeten, sejahtera, dan bahagia. Menghadirkan kehangatan dalam kebersamaan,spiritualitas dalam setiap langkah,dan arah gerakan yang membumi, namun tetap visioner.
-        Kami mempunyai tujuan besar untuk membangun ekosistem pendidikan yang memberdayakan guru secara kompetensi, ekonomi, dan spiritual sebagai fondasi peradaban yang berkelanjutan.
+        Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
+        Sebuah ruang semesta peningkatan kompetensi guru.
+        Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
       </title>
+      <meta name="title" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
+        Sebuah ruang semesta peningkatan kompetensi guru.
+        Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
+     `} />
+      <meta name="description" content={` Guruverse.ID | Ia adalah manifestasi dari ekosistem yang dibangun oleh ACF Eduhub.<br />
+        Sebuah ruang semesta peningkatan kompetensi guru.
+        Kami menghadirkan Learning & Teaching Management System (LTMS) untuk guru, modul, pelatihan, dan komunitas yang membantu guru Indonesia menjadi lebih kompeten secara pedagogik, profesional, personal, sosial, digital, dan inovatif—agar siap menjawab tantangan zaman dan menyalakan cahaya pendidikan bangsa.
+     `} />
+      <meta name="keywords" content="guru" />
       <body
         className=""
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
