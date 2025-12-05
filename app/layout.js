@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
         <TransitionProvider>
           <div className="w-full lg:max-w-full max-w-lg overflow-x-hidden  h-auto min-h-screen overflow-y-auto bg-body mx-auto ">
             <div className="flex justify-between items-center lg:m-4 m-2">
-              <img src="/svg/logo-colorfull.svg" className="lg:h-20 h-12 w-auto cursor-pointer" onClick={() => router.push("/")} />
+              <img src="/images/logo-colorfull.png" className="lg:h-7 h-6 w-auto cursor-pointer my-4 ml-4" onClick={() => router.push("/")} />
               <div className="lg:flex mr-4 hidden ">
                 <button className="mr-4 cursor-pointer" onClick={() => router.push("/about-us")}>
                   <span className={` text-primary font-semibold hover:text-secondary `}>Tentang Kami</span>
@@ -97,13 +97,13 @@ export default function RootLayout({ children }) {
             {children}
             <footer className="grid grid-flow-row grid-cols-3 w-full justify-between items-end bg-secondary lg:pb-8 pb-0 lg:pt-28 pt-0 lg:pr-0 pr-8">
               <div className="mt-16 col-span-2 lg:mx-10 mx-4 relative z-10 flex flex-col ">
-                <div className="relative lg:w-32 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2 lg:pb-[15%] pb-[65%]" onClick={() => router.push("/")} >
+                <div className="relative ml-3 lg:w-32 w-28 h-auto mb-6 cursor-pointer lg:order-1 order-2 lg:pb-[2%] pb-[7%]" onClick={() => router.push("/")} >
                   <Image 
-                    src="/svg/logo-white.svg"
+                    src="/images/logo-white.png"
                     alt="background"
                     fill
                     // priority
-                    className="object-cover object-bottom"
+                    className="object-fill object-bottom"
                   />
                 </div>
                 <div className="lg:order-2 order-1 mb-4 lg:mb-0">
