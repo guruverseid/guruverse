@@ -7,7 +7,7 @@ export default function Page() {
   const router = useRouter();
 
   return (
-    <div className="w-full h-auto mx-auto relative z-10 lg:pb-44 pb-64 lg:-mb-72 -mb-80 pt-16 ">
+    <div className="w-full h-auto mx-auto relative z-10 pb-56 pt-16  ">
       {/* ================= BACKGROUND ================= */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         <div className="hidden lg:block w-full h-full">
@@ -19,7 +19,7 @@ export default function Page() {
             className="object-cover object-bottom"
           />
         </div>
-
+        
         <div className="lg:hidden w-full h-full">
           <Image
             src="/backgrounds/bg-home-mobile.svg"
@@ -30,7 +30,9 @@ export default function Page() {
           />
         </div>
       </div>
+      <div className="hidden lg:block w-full lg:h-96 h-0 bottom-0 bg-secondary absolute -z-20">
 
+        </div>
       <div className="flex w-full lg:flex-row flex-col justify-between items-center lg:pl-32 pl-0 relative z-10 pb-72 lg:-mt-12 -mt-0">
         <div className="lg:pl-10 px-10 lg:w-1/2 lg:-mt-0 -mt-16 relative z-10 lg:order-1 order-2 flex flex-col">
           <p className="lg:text-5xl text-4xl lg:pr-0 px-0 lg:pt-0 pt-10  font-bold mb-4 text-brand">
@@ -141,6 +143,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
